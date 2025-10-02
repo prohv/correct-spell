@@ -2,8 +2,6 @@
 
 A lightweight Chrome extension that auto-corrects misspelled words in real-time on any web page. Built with TypeScript, nspell, and Hunspell dictionaries. Fast, privacy-friendly, and requires **no extra setup** from users.
 
----
-
 ## 🚀 Features
 
 - **Instant spell check & correction** on all text inputs and editable fields
@@ -11,13 +9,9 @@ A lightweight Chrome extension that auto-corrects misspelled words in real-time 
 - **Seamless user experience** (no cursor jump, silent corrections)
 - Supports most websites, including chat, forms, and search bars
 
----
-
 ## 🔧 Tech Stack
 
 - TypeScript, nspell, Hunspell, Webpack, Manifest V3
-
----
 
 ## 📝 How To Install
 
@@ -26,13 +20,9 @@ A lightweight Chrome extension that auto-corrects misspelled words in real-time 
 3. Enable "Developer mode" (top right)
 4. Click "Load unpacked" and select the `dist` folder
 
----
-
 ## 💡 Usage
 
 Just type anywhere—misspelled words auto-correct when you press space. Undo the last correction with Ctrl+Z.
-
----
 
 ## 📁 File Structure
 
@@ -42,8 +32,6 @@ Just type anywhere—misspelled words auto-correct when you press space. Undo th
 - `src/dictionaries/` - .aff/.dic files
 - `public/icons/`, `public/manifest.json` - extension assets
 
----
-
 ## ❓ FAQ
 
 - **Will users need Node/npm/any dependencies?**
@@ -51,8 +39,6 @@ Just type anywhere—misspelled words auto-correct when you press space. Undo th
 
 - **Is my data sent anywhere?**
   - All spell-checking is offline and local.
-
----
 
 ## 📄 License
 
