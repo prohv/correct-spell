@@ -1,0 +1,6 @@
+# English (US) Affix File for nspell
+SET UTF-8
+TRY esianrtolcdugmphbyfvkwzESIANRTOLCDUGMPHBYFVKWZ
+NOSUGGEST !
+PFX A Y 1
+PFX A 0 st .
