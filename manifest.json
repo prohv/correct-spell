@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "A spell checker extension for web pages",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "content_scripts": [
     {
@@ -16,8 +17,14 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup/index.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["dictionaries/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "icons": {
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"

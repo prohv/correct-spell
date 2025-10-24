@@ -1,0 +1,10 @@
+// This is a placeholder American English affix file for Hunspell
+// In a real implementation, you would include the actual en_US.aff content
+
+SET UTF-8
+
+TRY esianrtolcdugmphbyfvkwzESIANRTOLCDUGMPHBYFVKWZ
+
+# Basic affix rules would be here in a real implementation
+SFX A Y 1
+SFX A   0     e          [^aeiou]y

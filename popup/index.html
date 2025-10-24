@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorrectSpell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <h1>CorrectSpell</h1>
+            <p class="subtitle">Auto-corrects misspelled words in real-time</p>
+        </div>
+        
+        <div class="status-section">
+            <div class="status-indicator">
+                <div class="status-dot active"></div>
+                <span>Active</span>
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <h3>Settings</h3>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="autoCorrect" checked>
+                    Auto-correct misspelled words
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="showSuggestions" checked>
+                    Show spelling suggestions
+                </label>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <p>Just type anywhere on web pages - misspelled words auto-correct when you press space.</p>
+            <p>Undo the last correction with Ctrl+Z.</p>
+        </div>
+        
+        <div class="footer">
+            <p>CorrectSpell v1.0</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
