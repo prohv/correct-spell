@@ -1,6 +1,6 @@
 # CorrectSpell
 
-A lightweight Chrome extension that auto-corrects misspelled words in real-time on any web page. Built with TypeScript, nspell, and Hunspell dictionaries. Fast, privacy-friendly, and requires **no extra setup** from users.
+A lightweight Chrome extension that auto-corrects misspelled words in real-time on any web page. Built with plain JavaScript, nspell, and Hunspell dictionaries. Fast, privacy-friendly, and requires **no extra setup** from users.
 
 ## 🚀 Features
 
@@ -8,17 +8,22 @@ A lightweight Chrome extension that auto-corrects misspelled words in real-time 
 - **Undo support** (Ctrl+Z for last auto-correction)
 - **Seamless user experience** (no cursor jump, silent corrections)
 - Supports most websites, including chat, forms, and search bars
+- **No React or TypeScript dependencies** - lightweight and efficient
+- **Plain HTML, CSS, JavaScript** implementation
 
 ## 🔧 Tech Stack
 
-- TypeScript, nspell, Hunspell, Webpack, Manifest V3
+- Plain JavaScript (no React, no TypeScript)
+- nspell, Hunspell, Manifest V3
+- No build tools required (no Vite, Webpack, etc.)
 
 ## 📝 How To Install
 
-1. Clone/download this repo and run `npm run build`
-2. Go to `chrome://extensions/` in your browser
-3. Enable "Developer mode" (top right)
-4. Click "Load unpacked" and select the `dist` folder
+1. Clone/download this repo
+2. Run `npm install` to install dependencies
+3. Go to `chrome://extensions/` in your browser
+4. Enable "Developer mode" (top right)
+5. Click "Load unpacked" and select this directory
 
 ## 💡 Usage
 
@@ -26,11 +31,12 @@ Just type anywhere—misspelled words auto-correct when you press space. Undo th
 
 ## 📁 File Structure
 
-- `src/background/service-worker.ts` - nspell engine, communication
-- `src/content/index.ts`, `inputListener.ts`, `corrector.ts` - input handling, correction logic
-- `src/shared/` - types and helpers
-- `src/dictionaries/` - .aff/.dic files
-- `public/icons/`, `public/manifest.json` - extension assets
+- `background.js` - nspell engine, communication
+- `content.js` - input handling, correction logic
+- `lib/helpers.js` - utility functions
+- `dictionaries/` - .aff/.dic files
+- `popup/` - HTML, CSS, JS for extension popup
+- `icons/`, `manifest.json` - extension assets
 
 ## ❓ FAQ
 
@@ -39,6 +45,9 @@ Just type anywhere—misspelled words auto-correct when you press space. Undo th
 
 - **Is my data sent anywhere?**
   - All spell-checking is offline and local.
+
+- **Why plain JavaScript instead of React/TypeScript?**
+  - Simpler architecture, faster loading, no build dependencies, more compatible with existing websites.
 
 ## 📄 License
 
