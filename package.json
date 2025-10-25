@@ -8,6 +8,7 @@
     "clean": "rm -rf dist && mkdir dist"
   },
   "dependencies": {
+    "dictionary-en-us": "^2.2.1",
     "nspell": "^2.1.5"
   }
 }
