@@ -2,13 +2,16 @@
   "name": "correctspell",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "build": "echo 'Build completed. Ready for Chrome extension packaging.'",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
     "clean": "rm -rf dist && mkdir dist"
   },
   "dependencies": {
-    "dictionary-en-us": "^2.2.1",
     "nspell": "^2.1.5"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0"
   }
 }
