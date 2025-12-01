@@ -17,3 +17,39 @@ async function initializeSpellChecker(){
         return false;
     }
 }
+
+function checkSpelling(word) {
+    if(!spellchecker){
+        console.log("Spell checker not initialised");
+        return;
+    }
+    const isCorrect = spellchecker.correct(word);
+    const suggestions = isCorrect ? [] : spellchecker.suggest(word).slice(0,2);
+    return {
+        correct: isCorrect,
+        suggestions: suggestions
+    }
+
+}
+
+initializeSpellChecker();
+
+function preProcessWord(word){
+    if(typeof word !== 'string' || word.length===0){
+        return null;
+    }
+    return word.toLowerCase().replace(/^[^a-z]+|[^a-z]+$/g, '');
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
+    if(request.action === 'checkSpelling'){
+        const result = checkSpelling(preProcessWord(request.word));
+        sendResponse(result);
+    }
+    else if (request.action === 'initialize'){
+        sendResponse({initialized : !!spellchecker});
+    }
+    else {
+        sendResponse({error: 'Unknown action'});
+    }
+});
